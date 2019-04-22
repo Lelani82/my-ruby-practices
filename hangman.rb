@@ -1,23 +1,33 @@
-# Get word from user:
-puts "Please enter your hangman word for us to guess"
-word = gets.downcase.strip.chars
-word_length = word.length
+# Choose a random word
+random_words_list = ["octopus", "pineapple", "teacher", "fish", "frog"]
+random_word = random_words_list.sample
 
-# Put word into an array
-letters = []
-letters << word
+puts random_word #testing
 
-# Create empty array to see how many letters to guess
-guess_letters = []
-guess_letters << ("_" * word_length)
+# Create empty answer array so user can see how many letters to guess
+answer_array = []
 
-puts "Guess this word #{guess_letters}"
+answer_array << ("_" * random_word.length)                # Shows user how many letters the word contains
 
-# Guess the letters of the word
-puts "What's your first letter you want to guess?"
-guesses = 
-#letters.each do |character|
-#    puts "Guess these letters "
+puts "Guess this word #{answer_array} or press (q)uit"
+guess = gets.strip.downcase
+guessed_letters = []
+# loop do 
+#     puts "Guess this word #{answer_array} or press (q)uit"
+#         if (guess == "q" or guess == "quit")
+#             puts "Thanks for playing!"
+#             return
+#         elsif (guess.length != 1)
+#             puts "Please only select a single letter"
+#         else
+#             guessed_letters << guess
+#         end
+#         break
+# end
 
 
+
+        
+
+puts guessed_letters # testing
 
